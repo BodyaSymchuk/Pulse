@@ -50,5 +50,46 @@ $(document).ready(function(){
                 $('.overlay, #order').fadeIn('fast');
             })
         });
+
+
+        function valideForms(form) {
+            $(form).validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    phone: {
+                        required: true,
+                        minlength: 10
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Будь ласка, введіть своє ім'я",
+                        minlength: jQuery.validator.format("Введіть {0} символа!")
+                    },
+                    phone: {
+                        required: "Будь ласка, введіть свій номер телефону",
+                        minlength: jQuery.validator.format("Введіть {0} цифр!")
+                    },
+                    email: {
+                      required: "Будь ласка, введіть свою поштову скриньку",
+                      email: "Неправильно введена пошта"
+                    }
+                }
+    
+            });
+        }
+
+        valideForms('#consultation-form');
+        valideForms('#consultation form');
+        valideForms('#order form');
+
+        $('input[name=phone]').mask("+38 (999) 999-99-99");
   });
 
