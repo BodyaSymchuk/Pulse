@@ -1,0 +1,34 @@
+.feedback {
+    min-height: 968px;
+    &-item {
+        display: flex;
+        padding-top: 60px;
+        &__text{
+            position: relative;
+            left: 61px;
+        }
+        img {
+            height: 100%;
+        }
+        &__name {
+            color: #0D0D0D;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &__subname {
+            color: #646464;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__descr {
+            position: relative;
+            top: 10px;
+            color: #0D0D0D;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
