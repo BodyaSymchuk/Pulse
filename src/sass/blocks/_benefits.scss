@@ -10,8 +10,13 @@
     &__item {
         width: 280px;
         flex-direction: column;
-        img {
-            width: 70px;
+    }
+    &__icon {
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
     }
     &__title {
